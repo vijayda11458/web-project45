@@ -9,7 +9,7 @@ class Config(object):
     BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or 'LKtO5Kt0djKZ/GTJmfKr3SNx1qT2q0XnnJtYObz+pVIwEgaUbYUZkzJMTW73PSSv1UiSFfjyTun6zRQhfEGn2w=='
     BLOB_CONTAINER = os.environ.get('BLOB_CONTAINER') or 'images'
 
-    SQL_SERVER = os.environ.get('SQL_SERVER') or 'helloworld1234.database.windows.net'
+    SQL_SERVER = os.environ.get('SQL_SERVER') or 'hellowold1234.database.windows.net'
     SQL_DATABASE = os.environ.get('SQL_DATABASE') or 'udacity-project'
     SQL_USER_NAME = os.environ.get('SQL_USER_NAME') or 'udacityadmin'
     SQL_PASSWORD = os.environ.get('SQL_PASSWORD') or 'Udacitystudent1'
