@@ -11,11 +11,12 @@ from flask_session import Session
 app = Flask(__name__)
 app.config.from_object(Config)
 # TODO: Add any logging levels and handlers with app.logger
-if __name__ != '__main__':
-    gunicorn_logger = logging.getLogger('gunicorn.error')
-    app.logger.handlers = gunicorn_logger.handlers
-    app.logger.setLevel(gunicorn_logger.level)
-app.logger.info('Server Started')
+handler=logging.StreamHandler(stream=sys.stdout)
+handler.setFormatter(logging.Formatter("[%(asctime)s] %(levelname)s in %(module)s: %message)s"))
+app.logger.addHandler(handler)
+app.logger.setLevel(logging.INFO)
+app.logger.info('App startup')
+app.logger.info(header)
 Session(app)
 db = SQLAlchemy(app)
 login = LoginManager(app)
